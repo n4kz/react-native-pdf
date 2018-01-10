@@ -264,11 +264,6 @@ export default class PdfView extends Component {
                 renderItem={this._renderItem}
                 keyExtractor={this._keyExtractor}
                 windowSize={11}
-                getItemLayout={(data, index) => ({
-                    length: this.props.horizontal ? this._getPageWidth() : this._getPageHeight(),
-                    offset: ((this.props.horizontal ? this._getPageWidth() : this._getPageHeight()) + this.props.spacing*this.state.scale) * index,
-                    index
-                })}
                 maxToRenderPerBatch={1}
                 removeClippedSubviews={true}
                 /*initialScrollIndex={this.props.page - 1}*/ /* not action? */
